@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>Arraiá do Sabor 🌽</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    fontFamily: {
+
+                        fredoka: ['Fredoka', 'sans-serif']
+                    },
+
+                    colors: {
+
+                        primary: '#ff6b00',
+                        secondary: '#ffd93d',
+                        dark: '#3d1f00',
+                        cream: '#fff8e8',
+                        greenjunino: '#00a86b'
+                    }
+                }
+            }
+        }
+
+    </script>
+
+</head>
+
+<body class="bg-cream font-fredoka overflow-x-hidden text-dark">
+
+    <!-- FUNDO -->
+    <div
+        class="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/food.png')] opacity-5 pointer-events-none">
+    </div>
+
+    <!-- HEADER -->
+    <header
+        class="sticky top-0 z-50 bg-gradient-to-r from-orange-500 via-yellow-400 to-amber-500 shadow-xl">
+
+        <div
+            class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <div class="flex items-center gap-3">
+
+                <div
+                    class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-3xl shadow-lg">
+
+                    🌽
+                </div>
+
+                <div>
+
+                    <h1
+                        class="text-white font-black text-2xl tracking-wide">
+
+                        Arraiá do Sabor
+                    </h1>
+
+                    <p
+                        class="text-yellow-100 text-sm font-bold">
+
+                        Festa Junina Blockchain 🎉
+                    </p>
+                </div>
+            </div>
+
+            <button id="menuBtn"
+                class="md:hidden text-4xl text-white">
+
+                ☰
+            </button>
+
+            <nav class="hidden md:flex gap-8 text-white font-bold">
+
+                <a href="#cardapio"
+                    class="hover:scale-110 transition">
+
+                    Cardápio
+                </a>
+
+                <a href="#contato"
+                    class="hover:scale-110 transition">
+
+                    Contato
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- MENU MOBILE -->
+    <div id="mobileMenu"
+        class="fixed top-0 right-[-100%] w-[75%] h-full bg-white z-[9999] transition-all duration-300 shadow-2xl p-8">
+
+        <button id="closeBtn"
+            class="text-4xl text-primary mb-10">
+
+            ✕
+        </button>
+
+        <div class="flex flex-col gap-6 text-2xl font-bold">
+
+            <a href="#cardapio">
+                🌽 Cardápio
+            </a>
+
+            <a href="#contato">
+                📞 Contato
+            </a>
+
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section
+        class="relative overflow-hidden bg-gradient-to-b from-yellow-200 via-orange-100 to-cream">
+
+        <div
+            class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
+
+            <div>
+
+                <span
+                    class="bg-primary text-white px-4 py-2 rounded-full text-sm font-black shadow-lg">
+
+                    🔥 ARRAIÁ 2026
+                </span>
+
+                <h2
+                    class="text-5xl md:text-7xl font-black mt-6 leading-tight">
+
+                    O sabor mais
+                    <span class="text-primary">
+                        caipira
+                    </span>
+                    da cidade 🌽
+                </h2>
+
+                <p
+                    class="mt-6 text-lg text-brown-700 font-medium">
+
+                    Pamonha, quentão, milho verde e pagamentos via
+                    blockchain Milho-Coin.
+                </p>
+
+                <div class="flex gap-4 mt-8 flex-wrap">
+
+                    <a href="#cardapio"
+                        class="bg-primary hover:scale-105 transition text-white px-8 py-4 rounded-2xl font-black shadow-xl">
+
+                        🌽 Ver Cardápio
+                    </a>
+
+                    <button
+                        class="bg-greenjunino hover:scale-105 transition text-white px-8 py-4 rounded-2xl font-black shadow-xl">
+
+                        ⛓️ Wallet Milho
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="relative flex justify-center">
+
+                <div
+                    class="w-80 h-80 rounded-full bg-gradient-to-br from-yellow-300 to-orange-500 flex items-center justify-center shadow-2xl border-[12px] border-white text-[9rem] animate-pulse">
+
+                    🌽
+                </div>
+
+                <div
+                    class="absolute top-0 right-10 bg-white px-4 py-2 rounded-full shadow-xl font-black animate-bounce">
+
+                    🔥 Quentão
+                </div>
+
+                <div
+                    class="absolute bottom-8 left-0 bg-white px-4 py-2 rounded-full shadow-xl font-black animate-bounce">
+
+                    🎉 Pamonha
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GPS -->
+    <section class="max-w-7xl mx-auto px-6 mt-10">
+
+        <div
+            class="bg-white rounded-3xl shadow-xl border-4 border-yellow-200 p-6">
+
+            <div
+                class="flex items-center justify-between gap-4 flex-wrap">
+
+                <div>
+
+                    <h3 class="text-2xl font-black">
+                        🌽 Entregador do Milho
+                    </h3>
+
+                    <p class="text-gray-500">
+                        Rastreamento blockchain em tempo real
+                    </p>
+                </div>
+
+                <div
+                    class="bg-green-100 text-green-700 px-5 py-2 rounded-full font-black animate-pulse">
+
+                    ONLINE
+                </div>
+            </div>
+
+            <div
+                class="w-full h-5 bg-yellow-100 rounded-full overflow-hidden mt-6">
+
+                <div id="barra-gps"
+                    class="h-full bg-gradient-to-r from-green-400 to-green-600 w-[10%] transition-all duration-1000">
+                </div>
+            </div>
+
+            <p id="status-gps"
+                class="mt-3 font-bold text-primary">
+
+                🌽 Saindo da cozinha...
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio"
+        class="max-w-7xl mx-auto px-6 py-20">
+
+        <div class="text-center">
+
+            <span
+                class="bg-yellow-300 px-4 py-2 rounded-full font-black shadow">
+
+                🎉 CARDÁPIO JUNINO
+            </span>
+
+            <h2
+                class="text-5xl font-black mt-6">
+
+                Delícias Caipiras
+            </h2>
+
+        </div>
+
+        <!-- CATEGORIAS -->
+        <div id="nav-categorias"
+            class="flex gap-4 overflow-x-auto mt-10 pb-4">
+        </div>
+
+        <!-- PRODUTOS -->
+        <div id="lista-produtos"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato"
+        class="bg-dark text-white py-16 relative overflow-hidden">
+
+        <div
+            class="absolute inset-0 opacity-10 text-[10rem] flex items-center justify-center">
+
+            🌽
+        </div>
+
+        <div
+            class="relative z-10 max-w-4xl mx-auto text-center px-6">
+
+            <h2
+                class="text-4xl font-black">
+
+                Arraiá do Sabor
+            </h2>
+
+            <p class="mt-4 text-yellow-100">
+
+                A primeira quermesse blockchain do Brasil 🌽
+            </p>
+
+            <div
+                class="grid md:grid-cols-3 gap-6 mt-10">
+
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-5">
+
+                    <h3 class="font-black text-xl">
+                        📍 Endereço
+                    </h3>
+
+                    <p class="mt-2 text-sm">
+                        Rua Prof. Toledo, 500
+                    </p>
+
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-5">
+
+                    <h3 class="font-black text-xl">
+                        📞 WhatsApp
+                    </h3>
+
+                    <p class="mt-2 text-sm">
+                        (15) 99833-5768
+                    </p>
+
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur rounded-2xl p-5">
+
+                    <h3 class="font-black text-xl">
+                        ⛓️ Milho-Coin
+                    </h3>
+
+                    <p class="mt-2 text-sm">
+                        Blockchain Caipira
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- WHATS -->
+    <a href="https://wa.me/5515999999999"
+        target="_blank"
+        class="fixed right-5 bottom-5">
+
+        <img src="./assets/images/whatsapp.png"
+            alt="WhatsApp"
+            class="h-[3.25rem]">
+
+    </a>
+
+    <!-- MODAL MILHO COIN -->
+    <div id="milhoCoinModal"
+        class="fixed inset-0 bg-black/70 hidden z-[9999] flex items-center justify-center p-6">
+
+        <div
+            class="bg-white rounded-3xl max-w-md w-full overflow-hidden shadow-2xl border-4 border-yellow-300">
+
+            <div
+                class="bg-gradient-to-r from-yellow-400 to-orange-500 p-6 text-center text-white">
+
+                <div class="text-7xl mb-3">
+                    🌽
+                </div>
+
+                <h2 class="text-3xl font-black">
+                    Milho-Coin
+                </h2>
+
+                <p class="font-bold">
+                    Blockchain Caipira
+                </p>
+
+            </div>
+
+            <div class="p-6">
+
+                <div
+                    class="bg-yellow-50 rounded-2xl p-4 border-2 border-yellow-200">
+
+                    <div
+                        class="flex justify-between items-center mb-3">
+
+                        <span class="font-black">
+                            Carteira Digital
+                        </span>
+
+                        <span
+                            class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-black">
+
+                            ONLINE
+                        </span>
+
+                    </div>
+
+                    <div
+                        class="bg-white rounded-xl p-3 text-xs break-all border">
+
+                        0xMILHOCOINBLOCKCHAIN2026
+                    </div>
+
+                </div>
+
+                <div class="mt-5">
+
+                    <div
+                        class="w-44 h-44 rounded-2xl bg-gradient-to-br from-yellow-200 to-orange-400 mx-auto flex items-center justify-center text-7xl">
+
+                        🌽
+                    </div>
+
+                </div>
+
+                <div id="statusBlockchain"
+                    class="hidden mt-5 bg-green-100 text-green-700 rounded-xl p-4 font-black text-center">
+
+                    ✅ Blockchain confirmada!
+                </div>
+
+                <div class="flex gap-3 mt-6">
+
+                    <button onclick="fecharMilhoCoin()"
+                        class="flex-1 bg-gray-200 py-3 rounded-2xl font-black">
+
+                        Cancelar
+                    </button>
+
+                    <button onclick="processarPagamentoMilho()"
+                        id="btnPagarMilho"
+                        class="flex-1 bg-primary text-white py-3 rounded-2xl font-black shadow-xl">
+
+                        🌽 Pagar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+
+        // ===================================
+        // API
+        // ===================================
+
+        const API_URL =
+            'https://festa-vercel-backjunina.vercel.app/api';
+
+        // ===================================
+        // ELEMENTOS
+        // ===================================
+
+        const navCategorias =
+            document.getElementById('nav-categorias');
+
+        const listaProdutos =
+            document.getElementById('lista-produtos');
+
+        let categoriasData = [];
+
+        // ===================================
+        // MENU MOBILE
+        // ===================================
+
+        const menuBtn =
+            document.getElementById('menuBtn');
+
+        const closeBtn =
+            document.getElementById('closeBtn');
+
+        const mobileMenu =
+            document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+
+            mobileMenu.style.right = '0';
+        });
+
+        closeBtn.addEventListener('click', () => {
+
+            mobileMenu.style.right = '-100%';
+        });
+
+        // ===================================
+        // CATEGORIAS
+        // ===================================
+
+        async function carregarCategorias() {
+
+            try {
+
+                const response =
+                    await fetch(`${API_URL}/categorias`);
+
+                categoriasData =
+                    await response.json();
+
+                renderizarCategorias();
+
+                if (categoriasData.length > 0) {
+
+                    carregarProdutos(
+                        categoriasData[0].id
+                    );
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+                navCategorias.innerHTML =
+                    `<p>Erro API 🌽</p>`;
+            }
+        }
+
+        function renderizarCategorias() {
+
+            navCategorias.innerHTML = '';
+
+            categoriasData.forEach(cat => {
+
+                const btn =
+                    document.createElement('button');
+
+                btn.innerText =
+                    `${cat.nome} 🎉`;
+
+                btn.className = `
+                    px-6 py-3 rounded-2xl
+                    bg-yellow-200
+                    hover:bg-primary
+                    hover:text-white
+                    font-black
+                    transition
+                    whitespace-nowrap
+                `;
+
+                btn.onclick = () =>
+                    carregarProdutos(cat.id);
+
+                navCategorias.appendChild(btn);
+            });
+        }
+
+        // ===================================
+        // PRODUTOS
+        // ===================================
+
+        async function carregarProdutos(categoriaId) {
+
+            listaProdutos.innerHTML = `
+                <div class="col-span-full text-center py-10">
+                    🌽 Carregando delícias...
+                </div>
+            `;
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${API_URL}/produtos?categoriaId=${categoriaId}`
+                    );
+
+                const produtos =
+                    await response.json();
+
+                renderizarProdutos(produtos);
+
+            } catch (error) {
+
+                listaProdutos.innerHTML =
+                    `<p>Erro ao carregar 🌽</p>`;
+            }
+        }
+
+        function renderizarProdutos(produtos) {
+
+            listaProdutos.innerHTML = '';
+
+            produtos.forEach(p => {
+
+                const preco =
+                    Number(p.preco || 0)
+                        .toLocaleString(
+                            'pt-BR',
+                            {
+                                style: 'currency',
+                                currency: 'BRL'
+                            }
+                        );
+
+                const card =
+                    document.createElement('div');
+
+                card.className = `
+                    bg-white rounded-3xl
+                    shadow-xl overflow-hidden
+                    hover:-translate-y-2
+                    transition duration-300
+                    border-4 border-yellow-100
+                `;
+
+                card.innerHTML = `
+
+                    <div
+                        class="bg-gradient-to-br from-yellow-100 to-orange-100 h-52 flex items-center justify-center">
+
+                        <img
+                            src="${p.imagem}"
+                            class="h-40 object-contain hover:scale-110 transition"
+                            onerror="this.src='https://cdn-icons-png.flaticon.com/512/5787/5787016.png'">
+                    </div>
+
+                    <div class="p-5">
+
+                        <h3
+                            class="font-black text-xl">
+
+                            ${p.nome}
+                        </h3>
+
+                        <p
+                            class="text-primary font-black text-2xl mt-3">
+
+                            ${preco}
+                        </p>
+
+                        <button
+                            onclick="abrirMilhoCoin('${p.nome}', '${preco}')"
+                            class="w-full mt-5 bg-gradient-to-r from-primary to-orange-500 text-white py-4 rounded-2xl font-black shadow-xl hover:scale-105 transition">
+
+                            🌽 Comprar com Milho-Coin
+                        </button>
+
+                    </div>
+                `;
+
+                listaProdutos.appendChild(card);
+
+            });
+        }
+
+        carregarCategorias();
+
+        // ===================================
+        // GPS
+        // ===================================
+
+        const etapasEntrega = [
+
+            '🌽 Saindo da cozinha...',
+            '🛺 Passando pela quermesse...',
+            '🔥 Desviando da fogueira...',
+            '🎉 Chegando no arraiá!'
+        ];
+
+        let progressoEntrega = 10;
+        let etapaAtual = 0;
+
+        function iniciarGPSFake() {
+
+            const barra =
+                document.getElementById('barra-gps');
+
+            const status =
+                document.getElementById('status-gps');
+
+            setInterval(() => {
+
+                progressoEntrega += 25;
+
+                if (progressoEntrega > 100) {
+
+                    progressoEntrega = 100;
+                }
+
+                barra.style.width =
+                    progressoEntrega + '%';
+
+                if (
+                    etapaAtual <
+                    etapasEntrega.length - 1
+                ) {
+
+                    etapaAtual++;
+                }
+
+                status.innerText =
+                    etapasEntrega[etapaAtual];
+
+            }, 4000);
+        }
+
+        iniciarGPSFake();
+
+        // ===================================
+        // MILHO COIN
+        // ===================================
+
+        function abrirMilhoCoin(produto, valor) {
+
+            document
+                .getElementById(
+                    'milhoCoinModal'
+                )
+                .classList.remove('hidden');
+
+            if (navigator.vibrate) {
+
+                navigator.vibrate([100, 50, 100]);
+            }
+        }
+
+        function fecharMilhoCoin() {
+
+            document
+                .getElementById(
+                    'milhoCoinModal'
+                )
+                .classList.add('hidden');
+
+            document
+                .getElementById(
+                    'statusBlockchain'
+                )
+                .classList.add('hidden');
+
+            document
+                .getElementById(
+                    'btnPagarMilho'
+                )
+                .innerHTML = '🌽 Pagar';
+        }
+
+        async function processarPagamentoMilho() {
+
+            const botao =
+                document.getElementById(
+                    'btnPagarMilho'
+                );
+
+            botao.innerHTML =
+                '⛓️ Minerando bloco...';
+
+            botao.disabled = true;
+
+            await new Promise(resolve =>
+                setTimeout(resolve, 3000)
+            );
+
+            document
+                .getElementById(
+                    'statusBlockchain'
+                )
+                .classList.remove('hidden');
+
+            botao.innerHTML =
+                '✅ Pago';
+
+            criarBlocoBlockchain();
+
+            setTimeout(() => {
+
+                fecharMilhoCoin();
+
+            }, 3000);
+        }
+
+        // ===================================
+        // BLOCO BLOCKCHAIN
+        // ===================================
+
+        function criarBlocoBlockchain() {
+
+            const bloco =
+                document.createElement('div');
+
+            bloco.className = `
+                fixed left-6 bottom-24
+                bg-gradient-to-r from-yellow-400 to-orange-500
+                text-white px-5 py-4 rounded-2xl
+                shadow-2xl z-[9999]
+                animate-bounce
+            `;
+
+            bloco.innerHTML = `
+                ⛓️ Novo bloco minerado 🌽
+            `;
+
+            document.body.appendChild(bloco);
+
+            setTimeout(() => {
+
+                bloco.remove();
+
+            }, 5000);
+        }
+
+        // ===================================
+        // CHUVA DE MILHO
+        // ===================================
+
+        function criarMilho() {
+
+            const milho =
+                document.createElement('div');
+
+            milho.innerHTML = '🌽';
+
+            milho.className = `
+                fixed top-[-50px]
+                text-4xl z-[9999]
+                pointer-events-none
+            `;
+
+            milho.style.left =
+                Math.random() *
+                window.innerWidth + 'px';
+
+            milho.style.animation =
+                'cairMilho 4s linear forwards';
+
+            document.body.appendChild(milho);
+
+            setTimeout(() => {
+
+                milho.remove();
+
+            }, 4000);
+        }
+
+        setInterval(criarMilho, 1200);
+
+        const style =
+            document.createElement('style');
+
+        style.innerHTML = `
+
+            @keyframes cairMilho {
+
+                0% {
+
+                    transform:
+                        translateY(-50px)
+                        rotate(0deg);
+
+                    opacity: 1;
+                }
+
+                100% {
+
+                    transform:
+                        translateY(120vh)
+                        rotate(720deg);
+
+                    opacity: 0;
+                }
+            }
+
+        `;
+
+        document.head.appendChild(style);
+
+    </script>
+
+    <!-- FOGUEIRA ANIMADA -->
+<canvas id="fogueiraCanvas"
+    class="fixed inset-0 pointer-events-none z-[1]">
+</canvas>
+
+<script>
+
+    // ==============================
+    // FOGUEIRA ANIMADA JUNINA 🔥
+    // Partículas seguindo o mouse
+    // ==============================
+
+    const canvas =
+        document.getElementById('fogueiraCanvas');
+
+    const ctx =
+        canvas.getContext('2d');
+
+    // TAMANHO
+    function resizeCanvas() {
+
+        canvas.width =
+            window.innerWidth;
+
+        canvas.height =
+            window.innerHeight;
+    }
+
+    resizeCanvas();
+
+    window.addEventListener(
+        'resize',
+        resizeCanvas
+    );
+
+    // POSIÇÃO MOUSE
+    let mouseX =
+        window.innerWidth / 2;
+
+    let mouseY =
+        window.innerHeight / 2;
+
+    window.addEventListener(
+        'mousemove',
+        (e) => {
+
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        }
+    );
+
+    // TOUCH MOBILE
+    window.addEventListener(
+        'touchmove',
+        (e) => {
+
+            mouseX =
+                e.touches[0].clientX;
+
+            mouseY =
+                e.touches[0].clientY;
+        }
+    );
+
+    // PARTÍCULAS
+    const particulas = [];
+
+    // CRIAR PARTÍCULA
+    function criarParticula() {
+
+        particulas.push({
+
+            x: mouseX,
+
+            y: mouseY,
+
+            size:
+                Math.random() * 10 + 4,
+
+            speedX:
+                (Math.random() - 0.5) * 2,
+
+            speedY:
+                Math.random() * -3 - 1,
+
+            alpha: 1,
+
+            color: `rgba(
+                255,
+                ${Math.random() * 180},
+                0,
+                1
+            )`
+        });
+    }
+
+    // ANIMAÇÃO
+    function animarFogueira() {
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+        // CRIA NOVAS PARTÍCULAS
+        for (let i = 0; i < 3; i++) {
+            criarParticula();
+        }
+
+        // LOOP
+        for (
+            let i = 0;
+            i < particulas.length;
+            i++
+        ) {
+
+            const p =
+                particulas[i];
+
+            // MOVIMENTO
+            p.x += p.speedX;
+
+            p.y += p.speedY;
+
+            p.alpha -= 0.015;
+
+            p.size *= 0.99;
+
+            // DESENHAR
+            ctx.beginPath();
+
+            ctx.fillStyle =
+                `rgba(
+                    255,
+                    ${150 + Math.random() * 100},
+                    0,
+                    ${p.alpha}
+                )`;
+
+            ctx.shadowBlur = 20;
+
+            ctx.shadowColor =
+                'orange';
+
+            ctx.arc(
+                p.x,
+                p.y,
+                p.size,
+                0,
+                Math.PI * 2
+            );
+
+            ctx.fill();
+
+            // REMOVER
+            if (
+                p.alpha <= 0 ||
+                p.size <= 0.5
+            ) {
+
+                particulas.splice(i, 1);
+
+                i--;
+            }
+        }
+
+        requestAnimationFrame(
+            animarFogueira
+        );
+    }
+
+    // INICIAR
+    animarFogueira();
+
+</script>
+
+</body>
+
+</html>
