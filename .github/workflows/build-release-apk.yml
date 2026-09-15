@@ -1,19 +1,14 @@
-name: Build APK Android
+name: Build Release APK
 
 on:
   push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build APK (Debug)
+  build-release:
+    name: Build Release APK
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
@@ -43,23 +38,30 @@ jobs:
       - name: 🔑 Grant Gradle Execute Permission
         run: chmod +x android/gradlew
 
-      - name: 🔨 Build Debug APK
+      - name: 🔨 Build Release APK
         run: |
           cd android
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleRelease --no-daemon
 
-      - name: 📤 Upload Debug APK
+      - name: 📤 Upload Release APK
         uses: actions/upload-artifact@v4
         if: success()
         with:
-          name: app-debug
-          path: android/app/build/outputs/apk/debug/app-debug.apk
-          retention-days: 7
+          name: app-release
+          path: android/app/build/outputs/apk/release/app-release.apk
+          retention-days: 30
 
-      - name: ✅ Build Success
+      - name: 🚀 Create Release
         if: success()
-        run: echo "✅ APK built successfully!"
-
-      - name: ❌ Build Failed
-        if: failure()
-        run: echo "❌ Build failed!" && exit 1
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            🎉 Release APK built successfully!
+            
+            Download the APK from the artifacts below.
+          draft: false
+          prerelease: false
