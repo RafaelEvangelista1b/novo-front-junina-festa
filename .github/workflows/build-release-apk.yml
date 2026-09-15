@@ -36,11 +36,11 @@ jobs:
         run: npx cap sync android
 
       - name: 🔑 Grant Gradle Execute Permission
-        run: chmod +x android/gradlew
+        run: chmod +x www/android/gradlew
 
       - name: 🔨 Build Release APK
         run: |
-          cd android
+          cd www/android
           ./gradlew assembleRelease --no-daemon
 
       - name: 📤 Upload Release APK
@@ -48,7 +48,7 @@ jobs:
         if: success()
         with:
           name: app-release
-          path: android/app/build/outputs/apk/release/app-release.apk
+          path: www/android/app/build/outputs/apk/release/app-release.apk
           retention-days: 30
 
       - name: 🚀 Create Release
