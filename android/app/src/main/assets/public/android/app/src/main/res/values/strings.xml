@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Festa Junina</string>
-    <string name="title_activity_main">Festa Junina</string>
-    <string name="package_name">com.festa.junina</string>
-    <string name="custom_url_scheme">com.festa.junina</string>
-</resources>

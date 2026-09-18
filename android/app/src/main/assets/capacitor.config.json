@@ -1,1 +1,5 @@
-{}
+{
+	"appId": "com.festa.junina",
+	"appName": "Festa Junina",
+	"webDir": "www"
+}
